@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Your custom CSS -->
+    <style>
+        body {
+            text-align: center;
+            background-image: url('passengers.webp');
+        }
+
+        .myclass {
+            border: 5px solid orange;
+            margin: auto;
+            width: 80%;
+            padding: 20px;
+            background-color: white;
+        }
+
+        .date-time-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .label-date-time {
+            text-align: left;
+            margin-bottom: 10px;
+        }
+        
+            
+        
+
+        .form-control {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container my-5">
+        <div class="myclass">
+            <h1>Book a call</h1>
+            <p>Book a slot, and our representative will call you within 1 hour of time.</p>
+            <hr>
+            <form action="#" id="callForm">
+                <div class="form-group">
+                    <label for="name" style="float:left;">Name</label>
+                    <input type="text" class="form-control" id="name" name="name">
+                </div>
+                <div class="form-group">
+                    <label for="email"style="float:left;">Email</label>
+                    <input type="email" class="form-control" id="email" name="email">
+                </div>
+                <div class="form-group">
+                    <label for="Phone"style="float:left;">Phone</label>
+                    <input type="number" class="form-control" id="Phone" name="Phone">
+                </div>
+                <div class="label-date-time">
+                    <label for="date">Time for Call</label>
+                </div>
+                <div class="date-time-container">
+                    <input type="date" class="form-control" id="date" name="date" value="2023-07-29">
+                    <input type="time" class="form-control" id="Time" name="Time" value="11:00">
+                </div>
+                <!-- Make the submit button wider and orange -->
+                <button type="submit" class="btn btn-primary btn-lg btn-block" style="background-color: orange;">GET A CALL</button>
+            </form> 
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Your custom JavaScript code -->
+    <script>
+        $(document).ready(function() {
+            // Handle form submission
+            $("#callForm").submit(function(event) {
+                event.preventDefault(); // Prevent the default form submission behavior
+
+                // Retrieve form data
+                const name = $("#name").val();
+                const email = $("#email").val();
+                const phone = $("#Phone").val();
+                const date = $("#date").val();
+                const time = $("#Time").val();
+
+                // Here, you can perform any necessary validation or further processing with the form data.
+                // For example, you can send the data to a server using AJAX.
+
+                // Sample output to the console
+                console.log("Form Data:");
+                console.log("Name:", name);
+                console.log("Email:", email);
+                console.log("Phone:", phone);
+                console.log("Date:", date);
+                console.log("Time:", time);
+            });
+        });
+    </script>
+</body>
+</html>
+
+
